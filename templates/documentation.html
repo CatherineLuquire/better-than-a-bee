@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Honey Production Model</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/contact_style.css">
+    <!-- Glyphicons Fontawesome link -->
+    <script src="https://kit.fontawesome.com/f11d2abb65.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="nav navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" style="background:rgb(206, 112, 25)" href="/">Home <i class="fas fa-home"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/model">Honey Product Modeling</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://betterbee-project.herokuapp.com/">Image Recognition</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Visualizations
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/viz1">Total Product/Price Per State</a>
+                        <a class="dropdown-item" href="/viz2">Production/Pesticide</a>
+                        <a class="dropdown-item" href="/viz3">Graphs Dash</a>
+                        <a class="dropdown-item" href="/viz4">Maps Dash</a>
+                        <a class="dropdown-item" href="/viz5">Colonies Added & Lost</a>
+                        <a class="dropdown-item" href="/viz6">Disease and Pesticides</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/documentation">Documentation & References</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <section class="row">
+            <div class="row justify-content-center">
+                <article class="description-content">
+
+<br>
+<br>
+                    <h3>Documentation</h3>
+                    <p>We obtained a dataset of 'Honeybees and Neonicotinoid Pesticides' from Kaggle.com for our machine learning project.
+                        Original dataset contained 761 rows and 16 columns with state name, year, honeybee colony number, honey production data, and the usage of neonicotinoid pesticides etc.
+                        
+                    </p>
+                    <p> We made two machine learning models to predict the total honey production (unit is lb) and the production value (unit is $).
+                        For the honey production model, we used honeybee colony number and all six neonicotinoid variables from the original dataset as x variables. 
+                        For the production value model, we used honeybee colony number, total honey production, and all six neonicotinoid variables from the original dataset as x variables.
+                        X and y variables were preprocessed with standard scaler.
+                        We used sklearn.linear_model with Linear Regression, Lasso, Ridge, and ElasticNet Models for the machine learning process, and compared the MSE and r2 values.
+                        Because we obtained similar MSE and r2 values from the models, we decided to use all models to predict the y variables.
+                    </p>
+                    <br>
+        <div class="container2">        
+            <div class="row">
+                <div class="column2">
+                    <div class="container2">
+                    
+                    <br>
+                    <img src="../static/img/HP_Graph.png" alt="HP_Graph" style="width:100%">
+                    </div> 
+                </div> 
+                <div class="column2">
+                    <div class="container2">
+                        
+                        <br>
+                    <img src="../static/img/PV_Graph.png" alt="PV_Graph" style="width:100%">
+                    </div> 
+                </div> 
+    <br>
+    <div class="container2"> 
+        <div class="wrap">
+        <font size="4" face="-apple-system,BlinkMacSystemFont" >
+        <table border="5" style="display: inline-block;" style="margin-right:10%;" >
+            <thead>
+              <tr>
+                <th colspan="3">Table1: MSE and r2 Values from Honey Production</th>
+              </tr>
+              <tr>
+                <th>Models</th>
+                <th>MSE</th>
+                <th>r2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Linear Regression</td>
+                <td>0.006</td>
+                <td>0.910</td>
+                
+              </tr>
+              <tr>
+                <td>Lasso</td>
+                <td>0.058</td>
+                <td>0.916</td>
+              </tr>
+              <tr>
+                <td>Ridge</td>
+                <td>0.062</td>
+                <td>0.910</td>
+              </tr>
+              <tr>
+                <td>ElasticNet</td>
+                <td>0.059</td>
+                <td>0.915</td>
+              </tr>
+            </tbody>
+          </table>
+         </font>
+         <font size="4" face="-apple-system,BlinkMacSystemFont" >
+          <table border="5" style="display: inline-block;" style="margin-right:10%;">
+            <thead>
+              <tr>
+                <th colspan="3">Table 2: MSE and r2 Values from Production Value</th>
+              </tr>
+              <tr>
+                <th>Models</th>
+                <th>MSE</th>
+                <th>r2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Linear Regression</td>
+                <td>0.213</td>
+                <td>0.756</td>
+                
+              </tr>
+              <tr>
+                <td>Lasso</td>
+                <td>0.204</td>
+                <td>0.766</td>
+              </tr>
+              <tr>
+                <td>Ridge</td>
+                <td>0.213</td>
+                <td>0.756</td>
+              </tr>
+              <tr>
+                <td>ElasticNet</td>
+                <td>0.201</td>
+                <td>0.770</td>
+              </tr>
+              
+            </tbody>
+            
+          </table>
+        </font>
+    </div>
+
+        </div> 
+    </div>
+</div>
+<br>
+                    <h3>References</h3>
+
+                    <p>
+                        Resources used for analysis, both using Kaggle and data.world sets ranging in years before the start of CCD, with the first reported case being in 2006, and going up to 2019 with some data sets.
+                        The image recognition data set was separated into the 4 different categories for classification (Bee, Wasp, insect, or other), and the model was created using these metrics to allow for image upload by the end user to be categorized into the 4 groups.
+                        
+                    </p>
+                    <h5>References:</h5>
+                    <ol>
+                        <li><a href="https://www.kaggle.com/jessicali9530/honey-production"> Honey Production in the USA (1998-2012):
+                            Honey Production Figures and Prices by National Agricultural Statistics Service </a></li>
+                        <ul style="padding-bottom:10px">
+                            <li>This dataset provides insight into honey production supply and demand in America by state from 1998 to 2012.</li>
+                            <li>Honey production data was published by the National Agricultural Statistics Service (NASS) of the U.S. Department of Agriculture.</li>
+                        </ul>
+                        <li><a href="https://www.kaggle.com/koki25ando/data-analysis-of-honey-production"> Data Analysis of Honey Production </a></li>
+                        <ul style="padding-bottom:10px">
+                            <li>This analysis project used the same data set as "Honey Production in the USA (1998-2012)"</li>
+                            <li>Our team drew inspiration from some of the visualizations presented in this project.</li>
+                        </ul>
+                        <li><a href="https://www.kaggle.com/kevinzmith/honey-with-neonic-pesticide?select=vHoneyNeonic_v02.csv"> Honeybees and Neonic Pesticides:
+                            Are Neonic pesticides connected to decline of honeybee colonies? </a></li>
+                        <ul style="padding-bottom:10px">
+                            <li>This dataset also used data from Honey Production in the USA, extended to the period 1998-2017. Also, it joined data from USGS's Pesticide National Synthesis Project, allowing evaluation of the statistical connections between Honey Production and the use of Neonicotinoid (neonic) pesticides.</li>
+                            <li>This project drew from this dataset to create visualizations, as well as performing machine learning prediction and analysis</li>
+                        </ul>
+                        <li><a href="https://data.world/finley/bee-colony-statistical-data-from-1987-2017"> Bee Colony Statistical Data from 1987 - 2017 </a></li>
+                        <ul style="padding-bottom:10px">
+                            <li>Bee Colony Survey Data by State data was retrieved from the United States Department of Agriculture National Agricultural Statistics Service Quick Stats Dataset.</li>
+                            <li>Bee Colony Loss file from the @makeovermonday dataset 2018w18-bee-colony-loss. </li>
+                         </ul>
+                        <li><a href="https://www.kaggle.com/jerzydziewierz/bee-vs-wasp"> Bee or wasp?:
+                            19480 Hand curated photos of bees, wasps and other insects. </a></li>
+                        <ul style="padding-bottom:10px">
+                            <li>Hand-curated, close-up photos of bees, wasps, and other insects, used to teach the program to distinguish bees from wasps.</li>
+                            <li>Our team drew much inspiration and information from this project in our machine-learning project to distinguish bees from other insects.</li>
+                        </ul>
+                    </ol>
+                    <hr>
+                    <h10>UNCC Data Boot Camp 2020</h10>
+                </article>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
