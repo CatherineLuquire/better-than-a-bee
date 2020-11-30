@@ -73,20 +73,20 @@ def viz6():
 @app.route('/model', methods=['GET', 'POST'])
 def main():
     if flask.request.method == 'POST':
-        PV_Elastic = joblib.load('updated_ML/kaggle_LRE_Elastic_2.sav')
-        PV_Lasso = joblib.load('updated_ML/kaggle_LRE_Lassso_2.sav')
-        PV_LRModel = joblib.load('updated_ML/kaggle_LRE_Model_2.sav')
-        PV_Ridge = joblib.load('updated_ML/kaggle_LRE_Ridge_2.sav')
-        HP_Elastic = joblib.load('updated_ML/kaggle_LRE_Elastic.sav')
-        HP_Lasso = joblib.load('updated_ML/kaggle_LRE_Lassso.sav')
-        HP_LRModel = joblib.load('updated_ML/kaggle_LRE_Linear.sav')
-        HP_Ridge = joblib.load('updated_ML/kaggle_LRE_Ridge.sav')
+        PV_Elastic = joblib.load('models/kaggle_LRE_Elastic_2.sav')
+        PV_Lasso = joblib.load('models/kaggle_LRE_Lassso_2.sav')
+        PV_LRModel = joblib.load('models/kaggle_LRE_Model_2.sav')
+        PV_Ridge = joblib.load('models/kaggle_LRE_Ridge_2.sav')
+        HP_Elastic = joblib.load('models/kaggle_LRE_Elastic.sav')
+        HP_Lasso = joblib.load('models/kaggle_LRE_Lassso.sav')
+        HP_LRModel = joblib.load('models/kaggle_LRE_Linear.sav')
+        HP_Ridge = joblib.load('models/kaggle_LRE_Ridge.sav')
         # kaggle_model = joblib.load('model/kaggle_model.sav')
         # brain_model is saved from 
-        HPX_scaler = joblib.load('updated_ML/X_scaler1.sav')
-        HPy_scaler = joblib.load('updated_ML/y_scaler1.sav')
-        PVX_scaler = joblib.load('updated_ML/X_scaler2.sav')
-        PVy_scaler = joblib.load('updated_ML/y_scaler2.sav')
+        HPX_scaler = joblib.load('models/X_scaler1.sav')
+        HPy_scaler = joblib.load('models/y_scaler1.sav')
+        PVX_scaler = joblib.load('models/X_scaler2.sav')
+        PVy_scaler = joblib.load('models/y_scaler2.sav')
 
 
         # X_scaler = joblib.load('model/X_scaler.sav')
