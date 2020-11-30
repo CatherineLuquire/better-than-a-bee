@@ -35,6 +35,11 @@ html {
   .card {
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
   }
+
+  .capt {
+    text-align: center;
+    color: gray;
+  }
   
   .container {
     padding: 0 16px;
@@ -193,6 +198,13 @@ body {
     border: 1px solid black;
     border-collapse: collapse;
 }
+  .table_app {
+    margin: 4em;
+    float: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+  }
 
 p {
   font-size: 18px;

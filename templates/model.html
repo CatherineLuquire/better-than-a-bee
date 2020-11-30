@@ -10,6 +10,49 @@
     <link rel="stylesheet" href="../static/css/contact_style.css">
     <!-- Glyphicons Fontawesome link -->
     <script src="https://kit.fontawesome.com/f11d2abb65.js" crossorigin="anonymous"></script>
+    <style>
+        form {
+            margin: 35px;
+            width: 100%;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+        th {
+            text-align: center;
+            font-size: large;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            font-size: medium;
+        }
+
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .result {
+            margin: auto;
+            width: 90%;
+            padding: 5%;
+            padding-top: px;
+        }
+
+        .input {
+            vertical-align: middle;
+            align-items: right;
+            padding-top: 15%;
+            padding-left: 40%;
+
+        }
+    </style>
+
 </head>
 
 <body>
@@ -51,114 +94,32 @@
             </ul>
         </div>
     </nav>
-    <style>
-        form {
-            margin: 35px;
-            /* width: 300px; */
-            width: 100%;
-            /* border: 1px solid #ccc;
-            padding: 5%; */
-
-        }
-
-        .result {
-            margin: auto;
-            width: 50%;
-            border: 1px solid #ccc;
-            padding: 5%;
-            padding-top: px;
-        }
-
-        .input {
-            vertical-align: middle;
-            align-items: right;
-            /* border: 1px solid #ccc; */
-            /* padding: 15%; */
-            padding-top: 15%;
-            padding-left: 40%;
-
-        }
-    </style>
-
+    
     <head>
         <title>Honey Production Prediction Models</title>
     </head>
 
     <body>
-        <!-- <div class="container"> -->
-        <!-- <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6">
-
-                <form action="{{ url_for('main') }}" method="POST">
-                    <fieldset>
-                        <legend>Input values:</legend>
-                        <ul class="list-group" id="filters">
-                            <ul>
-                                nClothianidin:
-                                <input name="nCLOTHIANIDIN" type="number" required>
-                            </ul>
-                            <br>
-                            <ul>
-                                nImicadcloprid:
-                                <input name="nIMIDACLOPRID" type="number" required>
-                            </ul>
-                            <br>
-                            <ul>
-                                nThiamethoxam:
-                                <input name="nTHIAMETHOXAM" type="number" required>
-                            </ul>
-                            <br>
-                            <ul>
-                                nAcetamiprid:
-                                <input name="nACETAMIPRID" type="number" required>
-                            </ul>
-                            <br>
-                            <ul>
-                                nThiacloprid:
-                                <input name="nTHIACLOPRID" type="number" required>
-                            </ul>
-                            <br>
-                            <ul>
-                                nAllNeonic:
-                                <input name="nAllNeonic" type="number" required>
-                            </ul>
-                            <br>
-                            <ul>
-                                numcol:
-                                <input name="numcol" type="number" required>
-                            </ul>
-                            <br>
-                        </ul>
-                        <input type="submit">
-                    </fieldset>
-                </form>
-            </div>
-        </div> -->
-
-
-
         <br>
 
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
-                    <form id="form" action="{{ url_for('main') }}" method="POST">
-                        <fieldset>
-                            <legend>Input Values:</legend>
-                            <br>
+                <form id="form" action="{{ url_for('main') }}" method="POST">
+                    <fieldset>
+                        <legend>Input Values:</legend>
+                        <br>
                         <div class="row">
                             <div class="col">
                                 <ul>
                                     <label for="nClothianidin">Clothianidin (kg)</label>
-                                    <input class="form-control" name="nCLOTHIANIDIN" type="number" placeholder="0-278498"
-                                        required>
+                                    <input class="form-control" name="nCLOTHIANIDIN" type="number" required>
                                 </ul>
                             </div>
                             <div class="col">
                                 <ul>
                                     <label for="nImicadcloprid">Imicadcloprid (kg)</label>
-                                    <input class="form-control" name="nIMIDACLOPRID" type="number" placeholder="1000"
-                                        required>
+                                    <input class="form-control" name="nIMIDACLOPRID" type="number" required>
                                 </ul>
                             </div>
                         </div>
@@ -166,15 +127,13 @@
                             <div class="col">
                                 <ul>
                                     <label for="nThiamethoxam">Thiamethoxam (kg)</label>
-                                    <input class="form-control" name="nTHIAMETHOXAM" type="number" placeholder="1000"
-                                        required>
+                                    <input class="form-control" name="nTHIAMETHOXAM" type="number" required>
                                 </ul>
                             </div>
                             <div class="col">
                                 <ul>
                                     <label for="nAcetamiprid">Acetamiprid (kg)</label>
-                                    <input class="form-control" name="nACETAMIPRID" type="number" placeholder="1000"
-                                        required>
+                                    <input class="form-control" name="nACETAMIPRID" type="number" required>
                                 </ul>
                             </div>
                         </div>
@@ -183,15 +142,13 @@
                             <div class="col">
                                 <ul>
                                     <label for="nThiacloprid">Thiacloprid (kg)</label>
-                                    <input class="form-control" name="nTHIACLOPRID" type="number" placeholder="1000"
-                                        required>
+                                    <input class="form-control" name="nTHIACLOPRID" type="number" required>
                                 </ul>
                             </div>
                             <div class="col">
                                 <ul>
                                     <label for="nAllneonic">All Neonicotinoids (kg)</label>
-                                    <input class="form-control" name="nAllNeonic" type="number" placeholder="1000"
-                                        required>
+                                    <input class="form-control" name="nAllNeonic" type="number" required>
                                 </ul>
                             </div>
                         </div>
@@ -199,13 +156,13 @@
                             <div class="col">
                                 <ul>
                                     <label for="numcol">Number of Colonies</label>
-                                    <input class="form-control" name="numcol" type="number" placeholder="1000" required>
+                                    <input class="form-control" name="numcol" type="number" required>
                                 </ul>
                             </div>
                             <div class="col">
                                 <ul>
                                     <label for="totalprod">Total Production (lbs)</label>
-                                    <input class="form-control" name="totalprod" type="number" placeholder="1000" required>
+                                    <input class="form-control" name="totalprod" type="number" required>
                                 </ul>
                             </div>
 
@@ -222,7 +179,7 @@
                         </div>
                     </fieldset>
 
-                    </form>
+                </form>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <br>
@@ -231,33 +188,59 @@
                 <br>
                 <br>
                 <br>
-                <div class="result" align="center">
-                    <p> <strong>HPLR Prediction:</strong> {{  HPLR_y  }} </p>
-                    <p> <strong>HPE Prediction:</strong> {{  HPE_y  }}</p>
-                    <p><strong>HPL Prediction:</strong> {{  HPL_y }}</p>
-                    <p><strong>HPR Prediction:</strong> {{  HPR_y }}</p>
-                    <p><strong>PVLR Prediction:</strong> {{  PVLR_y }}</p>
-                    <p><strong>PVL Prediction:</strong> {{  PVL_y }}</p>
-                    <p><strong>PVE Prediction:</strong> {{  PVE_y }}</p>
-                    <p><strong>PVR Prediction:</strong> {{  PVR_y }}</p>
-
+                <div class="container">
+                    <div class="result" align="center">
+                        <font size="4" face="-apple-system,BlinkMacSystemFont">
+                            <table class="center" border="2" style="display: inline-block;">
+                                <thead>
+                                    <tr>
+                                        <th colspan="10">Honey Production and Product Value Models</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Models</th>
+                                        <th>Honey Production (lbs)</th>
+                                        <th>Production Value ($)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Linear Regression</td>
+                                        <td>{{  HPLR_y  }}</td>
+                                        <td>{{  PVLR_y }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lasso</td>
+                                        <td>{{  HPL_y }}</td>
+                                        <td>{{  PVL_y }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ridge</td>
+                                        <td>{{  HPR_y }}</td>
+                                        <td>{{  PVR_y }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ElasticNet</td>
+                                        <td>{{  HPE_y  }}</td>
+                                        <td>{{  PVE_y }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </font>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- </div> -->
-
-        <br>
+            <br>
 
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
 
     </body>
 

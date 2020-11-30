@@ -60,21 +60,6 @@ h10 {
   color: gray;
 }
 
-.podpara {
-  /* display: flex, */
-  justify-content: center,
-  align-items: center,
-  text-align: center,
-  vertical-align: bottom,
-  /* border: 3px so gray; */
-  padding: 100 px,
-  margin: 50,
-  position: relative,
-  /* top: 50%;
-  left: 50%; */
-  /* transform: translate(-50%, -50%); */
-
-}
 
 @media (min-width: 434px){
   .navbar.bg-light {
