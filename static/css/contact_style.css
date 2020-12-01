@@ -5,6 +5,13 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
   
   .column {
     float: left;
