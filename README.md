@@ -10,6 +10,7 @@ By taking in data from various sources (Data.world and Kaggle) we have compiled 
 
 The team has created two machine learning tasks to assist in studying CCD! First, we have a model that will take in different metrics of pesticide usage to predict if their continued implementation would hinder production or bee health in a significant way. Especially in this dangerous time for bees limiting the amount of pesticides present in colonies is important to consider as it could be a major contributing factor to CCD. Second, we have an image recognition model that can take in a user uploaded image and separate it into four categories (Bee, Wasp, Insect, or other). The initial upload of the model has it at an almost 95% accuracy rate! Keep in mind however the model is only able to identify things close to the initial uploaded images for the model therefore it might classify some images incorrectly in the insect or other categories.
 
+## Development Team
 1. [Yukie Kajita](https://github.com/yukiekajita)
 2. [John Falcone](https://github.com/Apex8)
 3. [Katy Luquire](https://github.com/CatherineLuquire)
